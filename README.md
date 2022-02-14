@@ -19,7 +19,7 @@ npm start
 url : http://localhost:8080
 ```
 
-### Création d’un utilisateur et d’une base de données
+## Création d’un utilisateur et d’une base de données
 
 - Se connecter au server PostGres dans le terminal en une seule commande
 ```bash
