@@ -1,0 +1,287 @@
+body {
+    display: flex;
+    /* background-color: #C14040; */
+    background:  no-repeat center center fixed url("/img/background-2560x1440.jpg");
+    width: 99vw;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    font-family: 'Bree Serif', serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.title-navi {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #C14040;
+    background-color: #EFE3E3;
+    border-radius: 20px;
+    width: 70%;
+    height: 80px;
+    margin: 0;
+    padding: 0;
+}
+
+.logo {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-left: 0.7em;
+    font-weight: normal;
+    font-size: 1.7em;
+}
+
+.logo a {
+    color: #C14040;
+}
+
+
+.navi {
+    display: flex;
+}
+
+.navi a {
+    color: #C14040;
+}
+
+.navi p {
+    display: flex;
+    padding-right: 1em;
+    font-size: 1.3em;
+}
+
+.cardContainer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 70%;
+    margin: 1em;
+    padding: 0;
+}
+
+.card {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: rgba(152, 44, 44);
+    margin-bottom: 1em;
+    border-radius: 35px;
+    width: auto;
+    transition: all .5s;
+}
+
+.card img {
+    display: flex;
+    margin: 1em;
+    width: 400px;
+    height: auto;
+}
+
+.cardName {
+    display: flex;
+    color: #F7D0BC;
+    font-size: 1.5em;
+    justify-content: center;
+}
+
+.card:hover {
+    box-shadow: 0px 0 40px #111;
+    background-color: rgba(255, 99, 71, 0.8);
+}
+
+.contains-info {
+    background-color: red;
+}
+
+.detail {
+    display: flex;
+}
+h1 {
+    text-align: center;
+    width: 100%;
+    color: white;
+    font-size: 2.2em;
+}
+h2 {
+    padding: 0;
+}
+
+.detail {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.picture {
+    display: flex;
+}
+
+.picture img {
+    display: block;
+    width: 500px;
+    height: auto;
+}
+
+.contains-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgba(171, 56, 56, 0.95);
+    color: white;
+    font-size: 1.3em;
+    width: 38vw;
+    border-radius: 15px;
+    padding: 1.3em;
+}
+
+.contains-info span {
+    font-weight: bold;
+    font-size: 1em;
+    margin-bottom: 1em;
+}
+
+.retour {
+    text-align: center;
+    margin-top: 1.2em;
+}
+.retour a {
+    font-size: 1.2em;
+    color: black;
+}
+
+.type-pokemon {
+    display: flex;
+    flex-direction: row;
+}
+
+.badge-type {
+    display: flex;
+    padding: 4px 10px;
+    width: fit-content;
+    border-radius: 5px;
+    font-size: 0.8em;
+    margin-right: 10px;
+    margin-top: -20px;
+}
+
+.statistiques {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.bar-container {
+    width: 400px;
+    margin: 1em;
+}
+
+progress {
+    -webkit-appearance: none;
+    background-color: #632B2B;
+    width: 90%;
+    /* max-width: 100%;
+    min-width: 50%; */
+    border-radius: 7px;
+}
+
+::-webkit-progress-value {
+    background-color: white;
+    border-radius: 7px;
+}
+
+::-webkit-progress-bar {
+    background-color: #632B2B;
+    border-radius: 7px;
+}
+
+.typeName {
+    display: flex;
+    color: white;
+    font-size: 1em;
+    justify-content: center;
+}
+
+.badge-list-type {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+    width: 300px;
+    height: 100px;
+    border-radius: 5px;
+    font-size: 2em;
+    margin-right: 10px;
+    margin-top: 20px;
+}
+
+
+/*
+    Styles pour les écrans de moins de 1000px de large :
+*/
+
+@media screen and (max-width: 1000px) {
+    .header {
+        position:static;
+        width:auto;
+        float:none;
+        margin-left:0;
+        height: auto;
+    }
+
+    .container {
+        width:96%;
+        padding-left:0;
+    }
+
+    .content-titles {
+        padding: 0;
+        margin: 0;
+    }
+
+    .page {
+        padding: 0 1rem;
+    }
+
+    .nav {
+        padding: 1rem;
+    }
+
+    .nav .title {
+        display:none;
+    }
+
+    .nav-links {
+        margin-top:0;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .nav-item {
+        width:calc(33.3333% - .5rem);
+        text-align: center;
+        margin: 0 0.5em;
+    }
+
+    .nav-item-link {
+        margin-bottom: 0;
+    }
+
+    progress {
+        -webkit-appearance: none;
+        background-color: #632B2B;
+        width: 50%;
+        border-radius: 7px;
+    }
+}

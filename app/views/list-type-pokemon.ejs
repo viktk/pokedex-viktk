@@ -1,0 +1,13 @@
+<%- include('partials/header') %>
+
+<h1>Cliquez sur un type pour voir tous les Pokémon de ce type</h1>
+    <% for (let types of type) { %>
+      <div class="badge-list-type" style="background-color: #<%= types.color %>;">
+        <a href="/list-type-pokemon/<%= types.name %>">
+          <p class="typeName"><%= types.name %></p>
+        </a>
+      </div>
+    <% } %>
+
+
+<%- include('partials/footer') %>

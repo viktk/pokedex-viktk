@@ -1,0 +1,64 @@
+<%- include('partials/header') %>
+
+    <h1>Détails de <%= detail.nom %></h1>
+
+    <div class="detail">
+        <div class="picture">
+            <img src="/img/<%= detail.numero %>.png" alt="photo de <%= detail.nom %>">
+        </div>
+
+        <div class="contains-info">
+            <h2>#<%= detail.numero %> <%= detail.nom %></h2>
+            <% for (let type of typeList) { %>
+            <p class="badge-type" style="background-color: #<%= type.color %>;"><%= type.name %></p>
+            <% } %>
+            <span>Statistiques</span>
+            
+            <div class="statistiques">
+                <div class="aptitude">
+                    <p>PV</p>
+                    <p>Attaque</p>
+                    <p>Défense</p>
+                    <p>Attaque Spé.</p>
+                    <p>Défense Spé.</p>
+                    <p>Vitesse</p>
+                </div>
+
+                <div class="stat">
+                    <p><%= detail.pv %></p>
+                    <p><%= detail.attaque %></p>
+                    <p><%= detail.defense %></p>
+                    <p><%= detail.attaque_spe %></p>
+                    <p><%= detail.defense_spe %></p>
+                    <p><%= detail.vitesse %></p>
+                </div>
+
+                <div>
+                    <div class="bar-container">
+                        <progress max="255" value="<%= detail.pv %>"></progress>
+                    </div>
+                    <div class="bar-container">
+                        <progress max="255" value="<%= detail.attaque %>"></progress>
+                    </div>
+                    <div class="bar-container">
+                        <progress max="255" value="<%= detail.defense %>"></progress>
+                    </div>
+                    <div class="bar-container">
+                        <progress max="255" value="<%= detail.attaque_spe %>"></progress>
+                    </div>
+                    <div class="bar-container">
+                        <progress max="255" value="<%= detail.defense_spe %>"></progress>
+                    </div>
+                    <div class="bar-container">
+                        <progress max="255" value="<%= detail.vitesse %>"></progress>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <span class="retour"><a href="/">Revenir à la liste</a></span>
+
+
+<%- include('partials/footer') %>

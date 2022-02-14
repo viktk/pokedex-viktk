@@ -1,0 +1,14 @@
+<%- include('partials/header') %>
+
+
+    <% pokemon.forEach( (poke) => { %>
+      <div class="card">
+        <a href="/detail-pokemon/<%= poke.numero %>">
+          <img src="/img/<%= poke.numero %>.png" alt="photo de <%= poke.nom %> ">
+          <p class="cardName">#<%= poke.nom %></p>
+        </a>
+      </div>
+    <% }) %>
+
+
+<%- include('partials/footer') %>
